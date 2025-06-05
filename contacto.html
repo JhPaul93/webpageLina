@@ -77,26 +77,6 @@ nav ul li:last-child a {
 nav ul li:last-child a:hover {
   background-color: #3A4D63;
 }
-.heros{
-  background-image: url(IMG/background-image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 600px;
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-  
-  color: white;            /* texto claro */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra para que resalte */
-  
-  font-family: Arial, sans-serif; /* fuente clara y legible */
-  font-size: 2rem;          /* tamaño de texto grande */
-  text-align: center;       /* centra el texto en varias líneas */
-  
-  padding: 0 20px; 
-
-}
 
 
     section {
@@ -150,7 +130,7 @@ nav ul li:last-child a:hover {
 
     .swiper {
       width: 100%;
-      height: 400px;
+      height: 300px;
       display: flex;
       justify-content: center;
     }
@@ -164,7 +144,7 @@ nav ul li:last-child a:hover {
 
     .swiper-slide img {
       width: 100%;
-      max-height: 400px;
+      max-height: 300px;
       object-fit: cover;
       border-radius: 8px;
     }
@@ -224,6 +204,15 @@ nav ul li:last-child a:hover {
       color: #736156;
       text-align: center;
       margin-bottom: 30px;
+    }
+    .contacto-2{
+      background-image: url(IMG/mapabg.jpg);
+    }
+    .contacto-1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
     .formulario-container {
@@ -301,74 +290,28 @@ nav ul li:last-child a:hover {
     <img class="logo" src="IMG/Lina yepes.png" alt="Logo Lina Yepes">
     <h1><a href="/">Lina Yepes</a></h1>
     <nav>
-      <ul>
-        <li><a href="empresa.html">Quién soy</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="https://wa.me/573007453689" target="_blank">Pedir Cita</a></li>
-      </ul>
+        <ul>
+            <li><a href="empresa.html">Quién soy</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="https://wa.me/573007453689" target="_blank">Pedir Cita</a></li>
+          </ul>
     </nav>
   </header>
 
   <main>
-    <section class="heros">
-          <p>Conozca todas las teorias, domine todas las técnicas, pero al tocar un alma humana, sea otra alma humana</p>
-    </section>
-    <section id="quien-soy">
-      <img src="IMG/Lina.jpeg" alt="Lina Yepes">
-      <div class="descripcion">
-        <h2>ME PRESENTO</h2>
-        <p>Soy Lina Yepes, tengo 37 años, me gradué como psicóloga en el año 2020, y en el 2023 me gradué de la maestría en clínica psicológica.</p>
-        <p>Actualmente acompaño procesos psicológicos individuales en una empresa con más de 600 empleados y en la Universidad de Antioquia.</p>
-      </div>
-    </section>
+    
 
-    <section id="servicios">
-      <h2>SERVICIOS</h2>
-      <!-- Swiper para desplazamiento horizontal con botones -->
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="IMG/oferta1.jpeg" alt="Terapia individual">
-          </div>
-          <div class="swiper-slide">
-            <img src="IMG/oferta2.jpeg" alt="Evaluaciones psicológicas">
-          </div>
-          <div class="swiper-slide">
-            <img src="IMG/oferta3.jpeg" alt="Acompañamiento emocional">
-          </div>
-        </div>
-        <!-- Agregando los botones para controlar el desplazamiento -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </section>
+    
+    
 
-    <section id="blog">
-      <h2>TESTIMONIOS</h2>
-      <div class="testimonios-container">
-        <div class="testimonio">
-          <img src="IMG/blog1.jpeg" alt="Paciente feliz">
-          <blockquote>"Lina me ayudó a superar un momento muy difícil. Su calidez y profesionalismo marcaron la diferencia."</blockquote>
-          <footer>– Andrea M.</footer>
-        </div>
-        <div class="testimonio">
-          <img src="IMG/mental-health-2019924_640.jpg" alt="Paciente feliz">
-          <blockquote>"Gracias a Lina, aprendí a gestionar mis emociones de manera más saludable. Totalmente recomendada."</blockquote>
-          <footer>– Carlos R.</footer>
-        </div>
-        <div class="testimonio">
-          <img src="IMG/moon.jpg" alt="Paciente feliz">
-          <blockquote>"Sus sesiones me han dado claridad y tranquilidad mental. Una gran profesional."</blockquote>
-          <footer>– Luisa F.</footer>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto">
+    <section id="contacto" class="contacto-2">
       <h2>CONTACTO</h2>
-      <div class="formulario-container">
+      <div class="mapa contacto-1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126916.73961650311!2d-75.5812115!3d6.24420345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4428dfb80fad05%3A0x42137cfcc7b53b56!2sMedell%C3%ADn%2C%20Medellin%2C%20Antioquia!5e0!3m2!1sen!2sco!4v1748544637482!5m2!1sen!2sco" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="formulario-container ">
         <form action="mailto:jhpcs93@gmail.com" method="post" enctype="text/plain">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required>
