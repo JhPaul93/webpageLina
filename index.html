@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lina Yepes - Psicóloga Clínica</title>
+  <link rel="icon" href="IMG/Lina yepes.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   
   <!-- Incluyendo Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -77,26 +80,30 @@ nav ul li:last-child a {
 nav ul li:last-child a:hover {
   background-color: #3A4D63;
 }
-.heros{
-  background-image: url(IMG/background-image.jpg);
+.heros {
+  background-image: url(IMG/pexels-jplenio-1105386.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 600px;
-  display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
-  
-  color: white;            /* texto claro */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* sombra para que resalte */
-  
-  font-family: Arial, sans-serif; /* fuente clara y legible */
-  font-size: 2rem;          /* tamaño de texto grande */
-  text-align: center;       /* centra el texto en varias líneas */
-  
-  padding: 0 20px; 
-
+  position: relative;  /* Needed for absolute positioning */
+  color: #736156;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 20px;
 }
+
+.heros p {
+  position: absolute;
+  bottom: 190px;      /* distance from the bottom */
+  right: 115px;       /* distance from the right */
+  font-family: "Edu VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
 
 
     section {
@@ -211,7 +218,7 @@ nav ul li:last-child a:hover {
     .testimonio footer {
       text-align: right;
       font-size: 0.9em;
-      color: #8C7B72;
+      color: white;
     }
 
     /* Contacto */
@@ -309,11 +316,12 @@ nav ul li:last-child a:hover {
         <li><a href="https://wa.me/573007453689" target="_blank">Pedir Cita</a></li>
       </ul>
     </nav>
+    
   </header>
 
   <main>
     <section class="heros">
-          <p>Conozca todas las teorias, domine todas las técnicas, pero al tocar un alma humana, sea otra alma humana</p>
+          <p>Conozca todas las teorias,<br> domine todas las técnicas, pero al tocar un alma humana,<br> sea otra alma humana</p>
     </section>
     <section id="quien-soy">
       <img src="IMG/Lina.jpeg" alt="Lina Yepes">
@@ -360,7 +368,7 @@ nav ul li:last-child a:hover {
         </div>
         <div class="testimonio">
           <img src="IMG/moon.jpg" alt="Paciente feliz">
-          <blockquote>"Sus sesiones me han dado claridad y tranquilidad mental. Una gran profesional."</blockquote>
+          <blockquote>"Sus sesiones me han dado claridad y tranquilidad mental en todo sentido. Una gran profesional."</blockquote>
           <footer>– Luisa F.</footer>
         </div>
       </div>
