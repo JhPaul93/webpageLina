@@ -5,11 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lina Yepes - Psicóloga Clínica</title>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="icon" href="IMG/Lina yepes.png" type="image/x-icon">
-  
-  <!-- Incluyendo Swiper.js -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  
+  <!-- favicon logo -->
+  <link rel="icon" href="IMG/Lina yepes.png" type="image/png">
   <style>
     * {
       margin: 0;
@@ -24,100 +22,81 @@
     }
 
     header {
-  background-color: #F2EFEB;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 30px;
-  flex-wrap: wrap;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-}
+      background-color: #F2EFEB;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      flex-wrap: wrap;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
 
-header img.logo {
-  height: 100px; /* Aumentamos el tamaño del logo */
-  width: auto;
-}
+    header .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-header h1 a{
-  font-family: 'Merriweather', serif;
-  color: #3A4D63;
-  font-size: 2rem; /* Ajustamos el tamaño de la fuente del título */
-  margin-left: 10px; /* Reducimos el margen izquierdo */
-  display: inline-block; /* Alineamos el título junto al logo */
-  text-decoration: none;
-}
+    header img.logo {
+      height: 60px;
+      width: auto;
+    }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 10px 0;
-}
+    header h1 a {
+      font-family: 'Merriweather', serif;
+      color: #3A4D63;
+      font-size: 2rem;
+      text-decoration: none;
+    }
 
-nav a {
-  text-decoration: none;
-  color: #3A4D63;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: #3A4D63;
+      cursor: pointer;
+      margin-left: auto;
+    }
 
-nav a:hover {
-  color: #5D8AAB;
-}
+    nav.mobile-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
 
-nav ul li:last-child a {
-  background-color: #5D8AAB;
-  color: white;
-  padding: 8px 15px;
-  border-radius: 4px;
-}
+    nav.mobile-nav a {
+      text-decoration: none;
+      color: #3A4D63;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-nav ul li:last-child a:hover {
-  background-color: #3A4D63;
-}
+    nav.mobile-nav a:hover {
+      color: #5D8AAB;
+    }
 
+    nav.mobile-nav ul li:last-child a {
+      background-color: #5D8AAB;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+    }
+
+    nav.mobile-nav ul li:last-child a:hover {
+      background-color: #3A4D63;
+    }
 
     section {
       padding: 60px 20px;
-      margin-top: 100px; /* Para dar espacio al header fijo */
+      margin-top: 100px;
     }
 
-    /* Quién Soy */
-    #quien-soy {
-      background-color: #F2EFEB;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 40px;
-    }
-
-    #quien-soy img {
-      max-width: 400px;
-      border-radius: 10px;
-      width: 100%;
-    }
-
-    #quien-soy .descripcion {
-      max-width: 600px;
-    }
-
-    #quien-soy h2 {
-      font-family: 'Merriweather', serif;
-      color: #736156;
-      margin-bottom: 20px;
-    }
-
-    #quien-soy p {
-      color: #736156;
-      margin-bottom: 15px;
-      line-height: 1.6;
-    }
-
-    /* Servicios */
     #servicios {
       background-color: #F2E4C9;
       text-align: center;
@@ -131,124 +110,27 @@ nav ul li:last-child a:hover {
 
     .swiper {
       width: 100%;
-      height: 400px;
-      display: flex;
-      justify-content: center;
+      padding: 10px;
     }
 
     .swiper-slide {
       background-color: #F2EFEB;
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
     }
 
     .swiper-slide img {
       width: 100%;
-      max-height: 400px;
-      object-fit: cover;
+      height: auto;
+      max-height: 100%;
+      object-fit: contain;
       border-radius: 8px;
     }
 
-    /* Blog */
-    #blog {
-      background-color: #F2EFEB;
-      text-align: center;
-    }
-
-    #blog h2 {
-      font-family: 'Merriweather', serif;
-      color: #736156;
-      margin-bottom: 40px;
-    }
-
-    .testimonios-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .testimonio {
-      background-color: #F2E4C9;
-      border-radius: 10px;
-      padding: 20px;
-      width: 300px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-
-    .testimonio img {
-      width: 100%;
-      height: 200px;
-      border-radius: 8px;
-      margin-bottom: 15px;
-    }
-
-    .testimonio blockquote {
-      color: #736156;
-      font-style: italic;
-    }
-
-    .testimonio footer {
-      text-align: right;
-      font-size: 0.9em;
-      color: #8C7B72;
-    }
-
-    /* Contacto */
-    #contacto {
-      background-color: #F2EFEB;
-    }
-
-    #contacto h2 {
-      font-family: 'Merriweather', serif;
-      color: #736156;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .formulario-container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #F2E4C9;
-      padding: 30px;
-      border-radius: 10px;
-    }
-
-    .formulario-container form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .formulario-container label {
-      color: #736156;
-      font-weight: 600;
-    }
-
-    .formulario-container input,
-    .formulario-container textarea {
-      padding: 10px;
-      border: 1px solid #736156;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    .formulario-container button {
-      background-color: #8C7B72;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-    }
-
-    .formulario-container button:hover {
-      background-color: #736156;
-    }
-
-    /* Footer */
     footer {
       background-color: #736156;
       color: white;
@@ -274,88 +156,104 @@ nav ul li:last-child a:hover {
       width: 32px;
       height: 32px;
     }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav.mobile-nav {
+        display: none;
+        width: 100%;
+      }
+
+      nav.mobile-nav.show {
+        display: flex;
+      }
+
+      nav.mobile-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #F2EFEB;
+      }
+
+      #servicios {
+        padding: 40px 10px;
+      }
+
+      .swiper-slide img {
+        max-height: 250px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <img class="logo" src="IMG/Lina yepes.png" alt="Logo Lina Yepes">
+<header>
+  <div class="logo-title">
+    <img class="logo" src="IMG/Lina yepes.png" alt="Logo Lina Yepes" />
     <h1><a href="/">Lina Yepes</a></h1>
-    <nav>
-      <ul>
-        <li><a href="empresa.html">Quién soy</a></li>
-        <li><a href="servicios.html">Servicios</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="https://wa.me/573007453689" target="_blank">Pedir Cita</a></li>
-      </ul>
-  </header>
+  </div>
+  <button class="menu-toggle" aria-label="Menú móvil">&#9776;</button>
+  <nav class="mobile-nav">
+    <ul>
+      <li><a href="empresa.html">Quién soy</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="https://wa.me/573007453689" target="_blank" rel="noopener noreferrer">Pedir Cita</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    
-    <section id="servicios">
-      <h2>SERVICIOS</h2>
-      <!-- Swiper para desplazamiento horizontal con botones -->
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="IMG/oferta1.jpeg" alt="Terapia individual">
-          </div>
-          <div class="swiper-slide">
-            <img src="IMG/oferta2.jpeg" alt="Evaluaciones psicológicas">
-          </div>
-          <div class="swiper-slide">
-            <img src="IMG/oferta3.jpeg" alt="Acompañamiento emocional">
-          </div>
-        </div>
-        <!-- Agregando los botones para controlar el desplazamiento -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+<main>
+  <section id="servicios">
+    <h2>SERVICIOS</h2>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="IMG/oferta1.jpeg" alt="Terapia individual" /></div>
+        <div class="swiper-slide"><img src="IMG/oferta2.jpeg" alt="Evaluaciones psicológicas" /></div>
+        <div class="swiper-slide"><img src="IMG/oferta3.jpeg" alt="Acompañamiento emocional" /></div>
       </div>
-    </section>
-
-   
-  </main>
-
-  <footer>
-    <div class="social-links">
-      <a href="https://instagram.com/tuperfil" target="_blank">
-        <img src="IMG/Instagram-removebg-preview.png" alt="Instagram">
-      </a>
-      <a href="https://facebook.com/tuperfil" target="_blank">
-        <img src="IMG/Facebook-removebg-preview.png" alt="Facebook">
-      </a>
-      <a href="https://wa.me/573007453689" target="_blank">
-        <img src="IMG/whatsapp-removebg-preview.png" alt="WhatsApp">
-      </a>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
     </div>
-    <p>&copy; 2025 Lina Yepes. Todos los derechos reservados.</p>
-  </footer>
+  </section>
+</main>
 
-  <!-- Script de Swiper.js -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      slidesPerView: 2, // Muestra 2 imágenes por fila en pantallas grandes
-      spaceBetween: 10,
-      breakpoints: {
-        640: {
-          slidesPerView: 1, // Muestra 1 imagen por fila en pantallas pequeñas
-        },
-        1024: {
-          slidesPerView: 2, // 2 imágenes en pantallas medianas y grandes
-        }
-      }
-    });
-  </script>
+<footer>
+  <div class="social-links">
+    <a href="https://instagram.com/tuperfil" target="_blank"><img src="IMG/Instagram-removebg-preview.png" alt="Instagram"></a>
+    <a href="https://facebook.com/tuperfil" target="_blank"><img src="IMG/Facebook-removebg-preview.png" alt="Facebook"></a>
+    <a href="https://wa.me/573007453689" target="_blank"><img src="IMG/whatsapp-removebg-preview.png" alt="WhatsApp"></a>
+  </div>
+  <p>&copy; 2025 Lina Yepes. Todos los derechos reservados.</p>
+</footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav.mobile-nav');
+  toggleBtn.addEventListener('click', () => nav.classList.toggle('show'));
+</script>
 </body>
 </html>
-
-
-
-
